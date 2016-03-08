@@ -27,13 +27,13 @@
 
 	function scrollPage() {
 		var sy = scrollY(),
-		header = document.querySelector( '.navbar-fixed-top' );
-		print(header);
+		header = document.querySelector('.navbar-fixed-top' );
+
 		if ( sy >= changeHeaderOn ) {
-			classie.add( header, 'navbar-shrink' );
+			classie.add(header, 'navbar-shrink' );
 		}
 		else {
-			classie.remove( header, 'navbar-shrink' );
+			classie.remove(header, 'navbar-shrink' );
 		}
 		didScroll = false;
 	}
