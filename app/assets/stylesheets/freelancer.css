@@ -36,6 +36,11 @@ h6 {
     font-weight: 700;
 }
 
+h2,
+h3{
+    font-family: "3dumb", "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
 hr.star-light,
 hr.star-primary {
     margin: 25px auto 30px;
@@ -63,7 +68,7 @@ hr.star-light {
 
 hr.star-light:after {
     color: yellow;
-    background-color: #18bc9c;
+    background-color: orange;
 }
 
 hr.star-primary {
@@ -71,7 +76,7 @@ hr.star-primary {
 }
 
 hr.star-primary:after {
-    color: #2c3e50;
+    color: yellow;
     background-color: #fff;
 }
 
@@ -82,7 +87,7 @@ hr.star-primary:after {
 header {
     text-align: center;
     color: #fff;
-    background: #18bc9c;
+    background: orange;
 }
 
 header .container {
@@ -98,13 +103,14 @@ header img {
 header .intro-text .name {
     display: block;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 2em;
+    font-family: "3dumb","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 3em;
     font-weight: 700;
 }
 
 header .intro-text .skills {
     font-size: 1.25em;
+    font-family: "3dumb","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 300;
 }
 
@@ -149,7 +155,8 @@ header .intro-text .skills {
 
 .navbar {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "3dumb","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 1.3em;
     font-weight: 700;
 }
 
@@ -181,7 +188,7 @@ section h2 {
 
 section.success {
     color: #fff;
-    background: #18bc9c;
+    background: orange;
 }
 
 section.success a,
@@ -266,7 +273,7 @@ section.success a.active {
     font-size: 20px;
     color: #fff;
     background: 0 0;
-    transition: all .3s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 
 .btn-outline:hover,
@@ -274,7 +281,7 @@ section.success a.active {
 .btn-outline:active,
 .btn-outline.active {
     border: solid 2px #fff;
-    color: #18bc9c;
+    color: orange;
     background: #fff;
 }
 
