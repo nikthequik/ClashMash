@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'articles/strategy'
+
+  get 'articles/update'
+
   get 'welcome/index'
 
   resources :welcome
