@@ -21,6 +21,18 @@ html, body {
 	height: 42vh;
 }
 
+.what {
+	font-size: 1em;
+}
+
+.why ol {
+	margin-top: 16%;
+}
+
+.why ol li {
+	margin-top: 1em;
+}
+
 #join {
 	text-align: center;
 }
