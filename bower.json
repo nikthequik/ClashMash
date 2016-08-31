@@ -1,0 +1,24 @@
+{
+  "name": "clashmash",
+  "homepage": "https://github.com/nikthequik/ClashMash",
+  "authors": [
+    "nikthequik <quik.the.nick@gmail.com>"
+  ],
+  "description": "Connecting clans for better clashing.",
+  "main": "app.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "angularfire": "^2.0.2",
+    "angular-animate": "^1.5.8"
+  }
+}
