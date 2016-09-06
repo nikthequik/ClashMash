@@ -1,0 +1,26 @@
+{
+  "name": "clashmash",
+  "version": "1.0.0",
+  "description": "Where clans can duke it out during war.",
+  "main": "app.js",
+  "dependencies": {
+    "clash-of-clans-api": "^0.0.2",
+    "request": "^2.74.0",
+    "request-promise": "^4.1.1",
+    "requirejs": "^2.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikthequik/ClashMash.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikthequik/ClashMash/issues"
+  },
+  "homepage": "https://github.com/nikthequik/ClashMash#readme"
+}

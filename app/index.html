@@ -1,26 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Clash Mash</title>
 	<link href="https://fonts.googleapis.com/css?family=Coiny|Rock+Salt" rel="stylesheet">
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 	<link rel="stylesheet" href="css/main.css">
-
-
+	<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyA7guuUSqtVPZFDFhrq3Fu-U33lDuEejzM",
+	    authDomain: "clashmash-30849.firebaseapp.com",
+	    databaseURL: "https://clashmash-30849.firebaseio.com",
+	    storageBucket: "clashmash-30849.appspot.com",
+	  };
+	  firebase.initializeApp(config);
+	</script>
 </head>
-<body ng-app="home">
 
-	<main ng-view></main>
+<body ng-app="home">
 	
+	<main ng-view></main>
+
+	<script src="../node_modules/requirejs/require.js"></script>
+	<script src="../node_modules/clash-of-clans-api/dist/index.js"></script>
 	<script src="bower_components/jquery/dist/jquery.js"></script>
 	<script src="bower_components/angular/angular.js"></script>
 	<script src="bower_components/angular-route/angular-route.js"></script>
-	<script src="bower_components/angular-animate/angular-animate.js"></script>
+	
 	<script src="bower_components/angularfire/dist/angularfire.js"></script>
-	<script src="bower_components/firebase/firebase.js"></script>
+	<script src="bower_components/angular-animate/angular-animate.js"></script>
 	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="js/credential.js"></script>
 	<script src="js/app.js"></script>
+	<script src="js/lib.js"></script>
+	
 
 </body>
 </html>
