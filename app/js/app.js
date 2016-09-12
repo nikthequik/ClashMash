@@ -1,16 +1,18 @@
+
 angular.module('home', ['firebase', 'ngRoute'])
 .config( ['$routeProvider', function($routeProvider){
 	$routeProvider.when('/', {
 		templateUrl: 'view/home.html',
 		controller: 'HomeCtrl',
 		controllerAs: 'hc'
+	})
+	.when('/clashRoom', {
+		templateUrl: 'view/clash.html',
+		controller: 'MashCtrl',
+		controllerAs: 'mc'
 	});
 	
 }])
-.config(function($httpProvider) {
-	$httpProvider.defaults.useXDomain = true;
-	delete $httpProvider.defaults.headers.common['X-Requested-With'];
-})
 .controller('HomeCtrl', ['$http', '$firebaseObject', function($http, $firebaseObject){
 	
   	var hc = this;
@@ -25,22 +27,33 @@ angular.module('home', ['firebase', 'ngRoute'])
 				console.log(data.val());
 			});
 
-		var postData = { id: '#' + hc.clanID, username : hc.username, password : hc.pword};
-		// Get a key for a new Post.
-		var newPostKey = firebase.database().ref('clans').push().key;
-		// Write the new post's data simultaneously in the posts list and the user's post list. 
-		var updates = {}; 
-		updates[newPostKey] = postData; 
-		firebase.database().ref('clans').update(updates);
-		hc.clanID = '';
-		hc.pword = '';
-		hc.username = '';
-		hc.join.$setPristine();
-		hc.join.$setUntouched();
+			var postData = { id: '#' + hc.clanID, username : hc.username, password : hc.pword};
+			// Get a key for a new Post.
+			var newPostKey = firebase.database().ref('clans').push().key;
+			// Write the new post's data simultaneously in the posts list and the user's post list. 
+			var updates = {}; 
+			updates[newPostKey] = postData; 
+			firebase.database().ref('clans').update(updates);
+			hc.clanID = '';
+			hc.pword = '';
+			hc.username = '';
+			hc.join.$setPristine();
+			hc.join.$setUntouched();
 		});
 
 	};
   	
+  	hc.getFromDb = function() {
+  		auth.signInWithEmailAndPassword(email, password)
+  		.then(function(user){
+  			var clanRef = firebase.database().ref('clans');
+  			clanRef.on('value', function(snap) {
+  				console.log(user);
+  				hc.original = snap.val().text;
+  			})
+  		});
+  	};
+  	hc.getFromDb();
 
 	
 
